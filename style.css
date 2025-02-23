@@ -1,94 +1,79 @@
-body,html{
-    height:100%;
-    margin:0;
-    padding:0;
-}
-.total{
-    background-image: url("./backimgorg1.jpg");
-    height:100%;
-    width:100%;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size:cover;
-}
-.todo_value{
-    outline:none;
-    border:none;
-    color:black;
-    background-color: aqua;
+* {
+    padding: 0;
+    margin: 0;
+    color: aqua;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    font-weight:bold;
-    font-size:70px;
-    flex-grow:1;
-    border-bottom:2px solid;
 }
+
+.container {
+    height: 100vh;
+    /* background-color: lawngreen; */
+    background-image: URL('backimgorg1.jpg');
+    background-position: center;
+    background-size: cover;
+}
+
+.navbar {
+    height: 70px;
+    width: 100%;
+    /* background-color: blue; */
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.navbar ul {
+    list-style: none;
+    gap: 20px;
+    padding-right: 32px;
+    display: flex;
+    font-size: 20px;
+    color: aqua;
+}
+
+.navbar ul li {
+    cursor: pointer;
+}
+
+.navbar ul li:hover {
+    color: white;
+}
+
+.main-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    height: 70%;
+    width: 60%;
+    margin: auto;
+    margin-top: 60px;
+    gap: 30px;
+}
+
+.inner-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-left: 40px;
+}
+
+.todo {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+.todo input {
+    padding: 2px 5px;
+    background-color: aqua;
+    color: black;
+}
+
 .todo:has(.todo_checkbox:checked)
 {
     color:maroon;
     background-color:rgb(91, 165, 165);
-    text-decoration:line-through 8px;
-}
-.todo button:hover{
-    background-color: black;
-    color:deepskyblue;
-}
-.todo button{
-    background-color:black;
-    color:white;
-}
-ul li{
-    color:aqua;
-    display:inline;
-}
-.bod{
-    height:100%;
-    width:175vh;
-    justify-content: center;
-    align-items: center;
-}
-.todo{
-    text-align: center;
-    display:flex;
-    padding:15px;
-    gap:17px;
-}
-.todo .todo_checkbox{
-    height:auto;
-    width:70px;
-}
-.cont{
-    flex-direction:column;
-    height:100%;
-    width:1400px;
-    justify-content: center;
-    margin:auto;
-    display:flex;
-    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    padding-right:1500px;
-}
-nav{
-    display: flex;
-    align-items: right;
-    justify-content: flex-end;
-    padding:14px;
-}
-ul{
-    display: flex;
-    gap:80px;
-    padding-right: 70px;
-    font-size:65px;
-    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-}
-.cont h2{
-    font-size:105px;
-    color:white;
-    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-}
-img{
-    position:fixed;
-    top: 120px; /* Adjust as needed */
-    left: 230px; /* Adjust as needed */ /* Adjust as needed */
-}
-a{
-    text-decoration: none;
+    text-decoration:line-through 2px;
 }
